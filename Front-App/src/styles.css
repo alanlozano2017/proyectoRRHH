@@ -6,3 +6,8 @@
     text-decoration:none;
 
  }
+
+ button.nav-link p, i {
+   color: #c2c7d0;
+ }
+
