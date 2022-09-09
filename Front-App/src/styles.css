@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+
+ body a {
+    text-decoration:none;
+
+ }
+
+ button.nav-link p, i {
+   color: #c2c7d0;
+ }
+
+ table.table-bordered.dataTable td div button{
+  display:inline-block;
+  padding: 5px 6px;
+  margin-left: 3px
+
+}
+
+td div {
+  display: flex;
+
+
+}
+
+table.table-bordered.dataTable td:last-child {
+  border-right-width: 1px;
+  padding: 8px 0px;
+}
+
+td.estado{
+
+    text-align: center;
+}
+td.estado .badge{
+  margin-top: 8px;
+
+}
+
+table.dataTable>thead>tr>th.htestado{
+
+  padding-right: 0px;
+}
+
