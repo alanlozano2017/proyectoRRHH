@@ -1,4 +1,4 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-usuarios',
@@ -8,22 +8,22 @@ import { Component, OnInit, Renderer2 } from '@angular/core';
 })
 export class UsuariosComponent implements OnInit {
 
-  constructor(private renderer: Renderer2) {
+  constructor() {
   }
   
   ngOnInit(){
-    this.addJsToElement('../../../assets/js/tabla_user.js').onload = (teste) => {
-      // console.log(teste);
-  }
+    this.loadScript('./assets/js/tabla_user.js');
   }
   
-  addJsToElement(src: string): HTMLScriptElement {
-      const script = document.createElement('script');
-      script.type = 'text/javascript';
-      script.src = src;
-      this.renderer.appendChild(document.body, script);
-      return script;
-    }
+  public loadScript(url: string) {
+    const body = <HTMLDivElement> document.body;
+    const script = document.createElement('script');
+    script.innerHTML = '';
+    script.src = url;
+    script.async = false;
+    script.defer = true;
+    body.appendChild(script);
+  }
 
 
 }

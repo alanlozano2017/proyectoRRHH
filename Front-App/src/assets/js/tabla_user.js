@@ -40,12 +40,14 @@ $(function () {
       ]
 
     };
-
-    $("#example1").DataTable(
+if ($("#example1").length) {
+  $("#example1").DataTable(
     parametros
     ).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+}
 
-    $('#example2').DataTable({
+if ($("#example2").length) {
+  $('#example2').DataTable({
       "paging": true,
       "lengthChange": false,
       "searching": false,
@@ -54,4 +56,8 @@ $(function () {
       "autoWidth": false,
       "responsive": true,
     });
+}
+    
+
+    
   });
