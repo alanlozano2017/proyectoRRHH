@@ -17,6 +17,8 @@ import { ModulosComponent } from './usuarios/modulos/modulos.component';
 import { NewModuloComponent } from './usuarios/modulos/new-modulo/new-modulo.component';
 import { EditModuloComponent } from './usuarios/modulos/edit-modulo/edit-modulo.component';
 import { EditPermisosComponent } from './usuarios/rol-usuario/edit-permisos/edit-permisos.component';
+import { CalificacionesComponent } from './calificaciones/calificaciones.component';
+import { PuestosComponent } from './puestos/puestos.component';
 
 
 
@@ -36,7 +38,9 @@ import { EditPermisosComponent } from './usuarios/rol-usuario/edit-permisos/edit
     ModulosComponent,
     NewModuloComponent,
     EditModuloComponent,
-    EditPermisosComponent
+    EditPermisosComponent,
+    CalificacionesComponent,
+    PuestosComponent
   ],
   imports: [
     CommonModule,

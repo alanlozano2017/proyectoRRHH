@@ -8,6 +8,8 @@ import { PersonasComponent } from './personas/personas.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { RolUsuarioComponent } from './usuarios/rol-usuario/rol-usuario.component';
 import { ModulosComponent } from './usuarios/modulos/modulos.component';
+import { PuestosComponent } from './puestos/puestos.component';
+import { CalificacionesComponent } from './calificaciones/calificaciones.component';
 
 const routes: Routes = [
   { path: 'dashboard', component: PagesComponent ,
@@ -17,8 +19,13 @@ const routes: Routes = [
       { path: 'rol-usuarios', component: RolUsuarioComponent },
       { path: 'modulos', component: ModulosComponent },
 
-      { path: 'personas', component: PersonasComponent }
-
+      { path: 'personas', component: PersonasComponent },
+      {
+        path:'puestos',component: PuestosComponent
+      },
+      {
+        path:'calificaciones',component: CalificacionesComponent
+      }
     ]
   }
   
