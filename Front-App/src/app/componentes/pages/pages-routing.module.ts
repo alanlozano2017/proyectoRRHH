@@ -10,6 +10,7 @@ import { RolUsuarioComponent } from './usuarios/rol-usuario/rol-usuario.componen
 import { ModulosComponent } from './usuarios/modulos/modulos.component';
 import { PuestosComponent } from './puestos/puestos.component';
 import { CalificacionesComponent } from './calificaciones/calificaciones.component';
+import { InformePersonaComponent } from './informes/informe-persona/informe-persona.component';
 const routes: Routes = [
   { path: 'dashboard', component: PagesComponent ,
     children:[
@@ -24,7 +25,8 @@ const routes: Routes = [
       },
       {
         path:'calificaciones',component: CalificacionesComponent
-      }
+      },
+      { path: 'informe-personas', component: InformePersonaComponent }
 
     ]
   }

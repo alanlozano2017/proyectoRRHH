@@ -19,7 +19,12 @@ import { EditModuloComponent } from './usuarios/modulos/edit-modulo/edit-modulo.
 import { EditPermisosComponent } from './usuarios/rol-usuario/edit-permisos/edit-permisos.component';
 import { PuestosComponent } from './puestos/puestos.component';
 import { CalificacionesComponent } from './calificaciones/calificaciones.component';
-
+import { InformePersonaComponent } from './informes/informe-persona/informe-persona.component';
+import { BarChartComponent } from './informes/bar-chart/bar-chart.component';
+import { PieChartComponent } from './informes/pie-chart/pie-chart.component';
+import { PolarAreaChartComponent } from './informes/polar-area-chart/polar-area-chart.component';
+import { RadarChartComponent } from './informes/radar-chart/radar-chart.component';
+import { NgChartsModule } from 'ng2-charts';
 
 
 @NgModule({
@@ -40,12 +45,18 @@ import { CalificacionesComponent } from './calificaciones/calificaciones.compone
     EditModuloComponent,
     EditPermisosComponent,
     PuestosComponent,
-    CalificacionesComponent
+    CalificacionesComponent,
+    InformePersonaComponent,
+    BarChartComponent,
+    PieChartComponent,
+    PolarAreaChartComponent,
+    RadarChartComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
-    SharedModule
+    SharedModule,
+    NgChartsModule
   ],
   exports: [
     DashboardComponent,

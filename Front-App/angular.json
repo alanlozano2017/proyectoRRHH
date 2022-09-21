@@ -103,5 +103,8 @@
       }
     }
   },
-  "defaultProject": "Front-App"
+  "defaultProject": "Front-App",
+  "cli": {
+    "analytics": false
+  }
 }
