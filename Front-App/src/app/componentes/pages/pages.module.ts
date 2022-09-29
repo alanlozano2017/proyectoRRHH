@@ -25,6 +25,7 @@ import { PieChartComponent } from './informes/pie-chart/pie-chart.component';
 import { PolarAreaChartComponent } from './informes/polar-area-chart/polar-area-chart.component';
 import { RadarChartComponent } from './informes/radar-chart/radar-chart.component';
 import { NgChartsModule } from 'ng2-charts';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -56,7 +57,8 @@ import { NgChartsModule } from 'ng2-charts';
     CommonModule,
     RouterModule,
     SharedModule,
-    NgChartsModule
+    NgChartsModule,
+    ReactiveFormsModule
   ],
   exports: [
     DashboardComponent,

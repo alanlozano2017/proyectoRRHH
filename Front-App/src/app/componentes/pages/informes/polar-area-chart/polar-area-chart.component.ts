@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { ChartData, ChartEvent, ChartType } from 'chart.js';
 
 @Component({
@@ -6,26 +7,42 @@ import { ChartData, ChartEvent, ChartType } from 'chart.js';
   templateUrl: './polar-area-chart.component.html',
   styleUrls: [ './polar-area-chart.component.css' ]
 })
-export class PolarAreaChartComponent {
+export class PolarAreaChartComponent implements OnChanges {
+
+  @Input() messagepolar: ChartData<'polarArea'>;
+
+  ngOnChanges(changes: SimpleChanges) {
+
+      
+    this.polarAreaChartData= this.messagepolar ;
+
+}
+
+public dataChart1: any ={
+
+};
+
+public polarAreaChartData: ChartData<'polarArea'> = this.dataChart1;
+public polarAreaLegend = true;
+
+public polarAreaChartType: ChartType = 'polarArea';
+  
   // PolarArea
-  public polarAreaChartLabels: string[] = [ 'Download Sales', 'In-Store Sales', 'Mail Sales', 'Telesales', 'Corporate Sales' ];
-  public polarAreaChartData: ChartData<'polarArea'> = {
-    labels: this.polarAreaChartLabels,
-    datasets: [ {
-      data: [ 300, 500, 100, 40, 120 ],
-      label: 'Series 1'
-    } ]
-  };
-  public polarAreaLegend = true;
+  // public polarAreaChartLabels: string[] = [ 'Download Sales', 'In-Store Sales', 'Mail Sales', 'Telesales', 'Corporate Sales' ];
+  // public dataChart: any ={
+  //   labels: [ 'Download Sales', 'In-Store Sales', 'Mail Sales', 'Telesales', 'Corporate Sales' ],
+  //   datasets: [ {
+  //     data: [ 300, 500, 100, 40, 120 ]
+  //   } ]
+  // };
 
-  public polarAreaChartType: ChartType = 'polarArea';
 
-  // events
-  public chartClicked({ event, active }: { event: ChartEvent, active: {}[] }): void {
-    console.log(event, active);
-  }
+  // // events
+  // public chartClicked({ event, active }: { event: ChartEvent, active: {}[] }): void {
+  //   //console.log(event, active);
+  // }
 
-  public chartHovered({ event, active }: { event: ChartEvent, active: {}[] }): void {
-    console.log(event, active);
-  }
+  // public chartHovered({ event, active }: { event: ChartEvent, active: {}[] }): void {
+  //   //console.log(event, active);
+  // }
 }

@@ -30,7 +30,12 @@
               <div class="row mt-12">
 
                 <div class="col-sm-12">
-                  <h1>Gráfica</h1>
+                  <form [formGroup]="MostrarGrafico" (ngSubmit)="onSubmit($event)">  
+                    <button type="submit" name="bar"> Bar</button>   
+                    <button type="submit" name="area"> Area </button> 
+                    <button type="submit" name="pie"> Pie</button>   
+                    <button type="submit" name="radar"> Radar </button> 
+                  </form>
                 </div>
 
               </div>
@@ -49,7 +54,28 @@
     <!-- /.container-fluid -->
   </section>
 
-  <app-bar-chart></app-bar-chart>
-  <app-polar-area-chart></app-polar-area-chart>
-  <app-pie-chart></app-pie-chart>
-  <app-radar-chart></app-radar-chart>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-10 mx-auto">
+        <div class="card card-primary">
+          <!-- /.card-header -->
+          <div class="card-body">
+            <div class="row mt-12">
+              <div class="col-sm-12">
+                
+                <app-bar-chart  [hidden]="!submitted1" [messagebar]="messageBar1"></app-bar-chart>
+                <app-polar-area-chart [hidden]="!submitted2" [messagepolar]="messagePolar2"></app-polar-area-chart>
+                <app-pie-chart [hidden]="!submitted3" [messagepie]="messagePie3"></app-pie-chart>
+                <app-radar-chart [hidden]="!submitted4" [messageradar]="messageRadar4"></app-radar-chart>
+              </div>
+            </div>
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+  </div>
+ 

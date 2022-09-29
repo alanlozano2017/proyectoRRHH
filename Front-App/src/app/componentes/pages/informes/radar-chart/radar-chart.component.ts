@@ -1,5 +1,5 @@
 
-import { Component } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { ChartConfiguration, ChartData, ChartEvent, ChartType } from 'chart.js';
 
 @Component({
@@ -7,28 +7,50 @@ import { ChartConfiguration, ChartData, ChartEvent, ChartType } from 'chart.js';
   templateUrl: './radar-chart.component.html',
   styleUrls: [ './radar-chart.component.css' ]
 })
-export class RadarChartComponent {
-  // Radar
-  public radarChartOptions: ChartConfiguration['options'] = {
-    responsive: true,
-  };
-  public radarChartLabels: string[] = [ 'Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running' ];
+export class RadarChartComponent implements OnChanges{
 
-  public radarChartData: ChartData<'radar'> = {
-    labels: this.radarChartLabels,
-    datasets: [
-      { data: [ 65, 59, 90, 81, 56, 55, 40 ], label: 'Series A' },
-      { data: [ 28, 48, 40, 19, 96, 27, 100 ], label: 'Series B' }
-    ]
+  @Input() messageradar: ChartData<'radar'>;
+    
+  public dataChart1: any ={
+
   };
+
+  public radarChartData: ChartData<'radar'> = this.dataChart1;
   public radarChartType: ChartType = 'radar';
 
-  // events
-  public chartClicked({ event, active }: { event: ChartEvent, active: {}[] }): void {
-    console.log(event, active);
-  }
+  ngOnChanges(changes: SimpleChanges) {
+ 
+    this.radarChartData= this.messageradar ;
 
-  public chartHovered({ event, active }: { event: ChartEvent, active: {}[] }): void {
-    console.log(event, active);
-  }
+}
+// Radar
+public radarChartOptions: ChartConfiguration['options'] = {
+  responsive: true,
+  scales: {
+    radial: {
+        min: 0
+    }
+}
+};
+  // public radarChartLabels: string[] = [ 'Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running' ];
+
+  // public dataChart: any ={
+  //   labels: [ 'Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running' ],
+  //   datasets: [
+  //     { data: [ 65, 59, 90, 81, 56, 55, 40 ], label: 'Series A' }
+  //     ,
+  //     { data: [ 28, 48, 40, 19, 96, 27, 100 ], label: 'Series B' }
+      
+  //   ]
+  // };
+  
+
+  // // events
+  // public chartClicked({ event, active }: { event: ChartEvent, active: {}[] }): void {
+  //   //console.log(event, active);
+  // }
+
+  // public chartHovered({ event, active }: { event: ChartEvent, active: {}[] }): void {
+  //   //console.log(event, active);
+  // }
 }
