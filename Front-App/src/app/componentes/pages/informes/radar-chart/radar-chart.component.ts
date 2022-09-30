@@ -1,5 +1,5 @@
 
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges, OnInit } from '@angular/core';
 import { ChartConfiguration, ChartData, ChartEvent, ChartType } from 'chart.js';
 
 @Component({
@@ -7,7 +7,10 @@ import { ChartConfiguration, ChartData, ChartEvent, ChartType } from 'chart.js';
   templateUrl: './radar-chart.component.html',
   styleUrls: [ './radar-chart.component.css' ]
 })
-export class RadarChartComponent implements OnChanges{
+export class RadarChartComponent implements OnChanges, OnInit{
+  ngOnInit(): void {
+  
+  }
 
   @Input() messageradar: ChartData<'radar'>;
     
@@ -26,12 +29,22 @@ export class RadarChartComponent implements OnChanges{
 // Radar
 public radarChartOptions: ChartConfiguration['options'] = {
   responsive: true,
+  
   scales: {
+    
     radial: {
-        min: 0
+        beginAtZero: true,
+        min: 0,
+        ticks:{
+          //stepSize: 1
+        }
+        
+        
     }
 }
 };
+
+
   // public radarChartLabels: string[] = [ 'Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running' ];
 
   // public dataChart: any ={

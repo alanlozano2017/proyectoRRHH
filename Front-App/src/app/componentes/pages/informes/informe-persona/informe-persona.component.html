@@ -61,13 +61,38 @@
           <!-- /.card-header -->
           <div class="card-body">
             <div class="row mt-12">
-              <div class="col-sm-12">
-                
-                <app-bar-chart  [hidden]="!submitted1" [messagebar]="messageBar1"></app-bar-chart>
-                <app-polar-area-chart [hidden]="!submitted2" [messagepolar]="messagePolar2"></app-polar-area-chart>
-                <app-pie-chart [hidden]="!submitted3" [messagepie]="messagePie3"></app-pie-chart>
-                <app-radar-chart [hidden]="!submitted4" [messageradar]="messageRadar4"></app-radar-chart>
+              <div [hidden]="!submitted1" class="col-sm-6 mx-auto">
+                <app-bar-chart   [messagebar]="messageBar1"></app-bar-chart>
               </div>
+              <div [hidden]="!submitted1" class="col-sm-6 mx-auto">
+                <app-bar-chart   [messagebar]="messageBar2"></app-bar-chart>
+              </div>
+              <div [hidden]="!submitted1" class="col-sm-6 mx-auto">
+                <app-bar-chart   [messagebar]="messageBar3"></app-bar-chart>
+              </div>
+              <div [hidden]="!submitted2" class="col-sm-6 mx-auto">
+                <app-polar-area-chart  [messagepolar]="messagePolar2"></app-polar-area-chart>
+              </div>
+              <div [hidden]="!submitted3" class="col-sm-6 mx-auto">
+                <app-pie-chart  [messagepie]="messagePie3"></app-pie-chart>
+              </div>
+              <div [hidden]="!submitted3" class="col-sm-6 mx-auto">
+                <app-pie-chart  [messagepie]="messagePie4"></app-pie-chart>
+              </div>
+              <div [hidden]="!submitted3" class="col-sm-6 mx-auto">
+                <app-pie-chart  [messagepie]="messagePie5"></app-pie-chart>
+              </div>
+              <div [hidden]="!submitted4" class="col-sm-6 mx-auto">
+                <app-radar-chart  [messageradar]="messageRadar4"></app-radar-chart>
+
+              </div>
+              <div [hidden]="!submitted4" class="col-sm-6 mx-auto">
+                <app-radar-chart  [messageradar]="messageRadar5"></app-radar-chart>
+
+              </div>
+              
+
+
             </div>
           </div>
           <!-- /.card-body -->

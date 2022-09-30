@@ -10,14 +10,38 @@ export class InformePersonaComponent implements OnInit {
 
 
   messageBar1 ={
-    labels: [ '2006', '2007', '2008', '2009', '2010', '2011', '2012' ],
+    labels: [ 'Puntualidad', 'Compañerísmo', 'Presentación Pers', 'Cumplimiento Normas', 'Aplicación Procesos', 'Responsabilidad', 'Iniciativa' ],
     datasets: [
       // { data: [ 65, 59, 80, 81, 56, 55, 40 ], label: 'Series A' }
       // ,
-      { data: [ 28, 48, 40, 19, 86, 27, 90 ], label: 'Series AAAA' }
+      { data: [ 9, 7, 8, 9, 5, 6, 7 ], label: 'Calificación global' ,
+      backgroundColor: ['rgba(90, 228, 236, 1)']
+      }
     ]
   };
-  
+  messageBar2 ={
+    labels: [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'h7','h8', 'h9', 'h10' ],
+    datasets: [
+      // { data: [ 65, 59, 80, 81, 56, 55, 40 ], label: 'Series A' }
+      // ,
+      { data: [ 3, 2, 4, 3, 2, 4, 1, 5, 3, 2 ], label: 'Habilidades blandas Promedio' }
+    ]
+  };
+  messageBar3 ={
+    labels: [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'h7','h8', 'h9', 'h10' ],
+    datasets: [
+      // { data: [ 65, 59, 80, 81, 56, 55, 40 ], label: 'Series A' }
+      // ,
+      { data: [ 3, 2, 4, 3, 2, 4, 1, 5, 3, 2 ], label: 'Habilidades blandas Promedio' ,
+      backgroundColor: ['rgba(94, 208, 58, 1)']
+      }
+      ,
+      { data: [ 1, 3, 2, 4, 1, 1, 3, 4, 5, 3 ], label: 'Habilidades Duras Promedio' 
+      // ,
+      // backgroundColor: ['rgba(94, 208, 58, 1)']
+      }
+    ]
+  };
   messagePolar2 ={
     labels: [ 'Download Saleeeee', 'In-Store Sales', 'Mail Sales', 'Telesales', 'Corporate Sales' ],
     datasets: [ {
@@ -26,19 +50,49 @@ export class InformePersonaComponent implements OnInit {
   };
   
   messagePie3 ={
-    labels: [ [ 'Downloadddddddd', 'Sal' ], [ 'In', 'Store', 'Sales' ], 'Mail Sales' ],
+    // labels: [ [ 'Puestos Cubiertos', 'Sal' ], [ 'In', 'Store', 'Sales' ], 'Mail Sales' ],
+    labels: [ [ 'Puestos Cubiertos'], [ 'Puestos Vacantes'] ],
+
     datasets: [ {
-      data: [ 300, 500, 100 ]
+      data: [ 50, 6 ]
+    } ]
+  };
+  messagePie4 ={
+    // labels: [ [ 'Puestos Cubiertos', 'Sal' ], [ 'In', 'Store', 'Sales' ], 'Mail Sales' ],
+    labels: [ [ 'Calificación Buena'], [ 'Calificación Media'] , [ 'Calificación Mala'] ],
+
+    datasets: [ {
+      data: [ 30, 20, 5 ],
+      backgroundColor: ['rgba(94, 208, 58, 1)', 'rgba(246, 253, 112, 1)', 'rgba(255, 55, 55, 1)']
+    } ]
+  };
+
+  messagePie5 ={
+    // labels: [ [ 'Puestos Cubiertos', 'Sal' ], [ 'In', 'Store', 'Sales' ], 'Mail Sales' ],
+    labels: [ [ 'Estudios universitarios'],  [ 'Cursos'] , [ 'Secundario'] , [ 'Secundario Incompleto'] ],
+
+    datasets: [ {
+      data: [ 10, 20, 30, 10 ],
+      backgroundColor: ['rgba(94, 208, 58, 1)', 'rgba(90, 228, 236, 1)', 'rgba(246, 253, 112, 1)', 'rgba(255, 55, 55, 1)']
     } ]
   };
   
   messageRadar4 ={
-    labels: [ 'Eat', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running' ],
+    labels: [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'h7','h8', 'h9', 'h10' ],
     datasets: [
-      { data: [ 65, 59, 90, 81, 56, 55, 40 ], label: 'Series AAAAAA' }
+      { data: [ 3, 1, 4, 1, 5, 3, 2, 3, 2, 4 ], label: 'Hb Empleado x' }
       ,
-      { data: [ 28, 48, 40, 19, 96, 27, 100 ], label: 'Series B' }
-      
+      { data: [ 3, 2, 4, 3, 2, 4, 1, 5, 3, 2 ], label: 'Habilidades blandas Puesto' }
+
+    ]
+  };
+  messageRadar5 ={
+    labels: [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'h7','h8', 'h9', 'h10' ],
+    datasets: [
+      { data: [ 3, 4, 5, 3, 1, 3, 2, 4, 1, 1 ], label: 'Hb Empleado x' }
+      ,
+      { data: [ 1, 3, 2, 4, 1, 1, 3, 4, 5, 3 ], label: 'Habilidades Duras Puesto' }
+
     ]
   };
     

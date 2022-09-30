@@ -37,13 +37,13 @@ public pieChartPlugins = [ DatalabelsPlugin ];
         display: true,
         position: 'top',
       },
-      datalabels: {
-        formatter: (value, ctx) => {
-          if (ctx.chart.data.labels) {
-            return ctx.chart.data.labels[ctx.dataIndex];
-          }
-        },
-      },
+      // datalabels: {
+      //   formatter: (value, ctx) => {
+      //     if (ctx.chart.data.labels) {
+      //       return ctx.chart.data.labels[ctx.dataIndex];
+      //     }
+      //   },
+      // },
     }
   };
   // public dataChart: any ={
